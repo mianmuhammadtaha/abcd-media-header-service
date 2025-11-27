@@ -58,8 +58,8 @@ export default function Header() {
                                 <div className="max-w-7xl mx-auto h-full">
                                     <div className="bg-[#F4F5F8] rounded-xl  w-full h-full flex flex-col">
                                         <div className="flex-1 overflow-y-auto m-4 rounded-xl">
-                                            <div className="flex items-stretch min-h-0 h-full">
-                                                <div className="w-1/3 bg-[#232e3f] p-6 flex flex-col h-full relative after:content-[''] after:absolute after:right-0 after:top-0 after:h-full after:w-px after:bg-gray-200 after:opacity-20 rounded-xl">
+                                            <div className="flex items-stretch min-h-0 ">
+                                                <div className="w-1/3 bg-[#232e3f] p-6 relative after:content-[''] after:absolute after:right-0 after:top-0 after:h-full after:w-px after:bg-gray-200 after:opacity-20 rounded-xl">
                                                     <h3 className="text-white text-sm font-medium mb-3">Solutions</h3>
                                                     <div className="flex flex-wrap gap-1.5 mb-6 leading-tight">
                                                         {[
