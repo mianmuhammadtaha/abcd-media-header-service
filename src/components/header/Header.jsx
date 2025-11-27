@@ -10,11 +10,9 @@ import setting from '../../assets/setting.svg';
 import newfeature from '../../assets/image.png'
 
 export default function Header() {
-    // State and refs
     const [open, setOpen] = useState(false);
     const dropdownRef = useRef(null);
 
-    // Effect for handling outside clicks on the dropdown
     useEffect(() => {
         const ClickOutside = (event) => {
             if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -35,7 +33,6 @@ export default function Header() {
                     <img src={logo} alt="abcd media" className="h-10" />
                 </div>
 
-                {/* Navigation Links */}
                 <nav className="hidden md:flex items-center gap-8 text-gray-800 text-lg">
                     <a href="#" className="relative group transition text-gray-800 hover:text-[#AE2FE0] leading-none pb-1">
                         Home
@@ -47,9 +44,7 @@ export default function Header() {
                         <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#AE2FE0] transition-all duration-300 group-hover:w-full"></span>
                     </a>
 
-                    {/* Services Dropdown */}
                     <div ref={dropdownRef} className="relative">
-                        {/* Dropdown Toggle Button */}
                         <button
                             onClick={() => setOpen(!open)}
                             className="relative group flex items-center gap-1 text-gray-800 hover:text-[#AE2FE0] transition"
@@ -58,16 +53,13 @@ export default function Header() {
                             <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#AE2FE0] transition-all duration-300 group-hover:w-full"></span>
                         </button>
 
-                        {/* Dropdown Menu */}
                         {open && (
                             <div className="fixed top-[60px] left-0 right-0 bottom-0 z-50 bg-[#f8f9fc] pt-2 pb-6 overflow-hidden">
                                 <div className="max-w-7xl mx-auto h-full">
-                                    <div className="bg-[#F4F5F8] rounded-xl shadow-2xl w-full h-full flex flex-col">
+                                    <div className="bg-[#F4F5F8] rounded-xl  w-full h-full flex flex-col">
                                         <div className="flex-1 overflow-y-auto m-4 rounded-xl">
-                                            {/* Main Dropdown Content */}
-                                            <div className="flex min-h-0">
-                                                {/* Left Section - Navigation */}
-                                                <div className="w-1/3 bg-[#232e3f] p-6 relative after:content-[''] after:absolute after:right-0 after:top-0 after:h-full after:w-px after:bg-gray-200 after:opacity-20 rounded-xl">
+                                            <div className="flex items-stretch min-h-0 h-full">
+                                                <div className="w-1/3 bg-[#232e3f] p-6 flex flex-col h-full relative after:content-[''] after:absolute after:right-0 after:top-0 after:h-full after:w-px after:bg-gray-200 after:opacity-20 rounded-xl">
                                                     <h3 className="text-white text-sm font-medium mb-3">Solutions</h3>
                                                     <div className="flex flex-wrap gap-1.5 mb-6 leading-tight">
                                                         {[
@@ -140,10 +132,9 @@ export default function Header() {
                                                     </div>
                                                 </div>
 
-                                                {/* Right Section - Services Grid */}
                                                 <div className="w-2/3 px-3 overflow-y-auto rounded-xl">
-                                                    <div className="grid grid-cols-3 gap-1">
-                                                        <div className="bg-white p-2 shadow-sm">
+                                                    <div className="grid grid-cols-3 gap-1 ">
+                                                        <div className="bg-white p-2 shadow-sm rounded-tl-xl">
                                                             <img src={fragment} alt="fragment" className="w-8 h-8 mb-3" />
                                                             <h3 className="font-semibold mb-3 text-gray-800">Brand Development</h3>
                                                             <ul className="space-y-2 text-gray-600">
@@ -162,7 +153,6 @@ export default function Header() {
                                                             <ul className="space-y-2 text-gray-600">
                                                                 <li className="hover:text-[#AE2FE0] transition-colors">SEO Services</li>
                                                                 <li className="hover:text-[#AE2FE0] transition-colors">Google Ads</li>
-                                                                <li className="hover:text-[#AE2FE0] transition-colors">Social Ads</li>
                                                                 <li className="hover:text-[#AE2FE0] transition-colors">Meta Ads</li>
                                                                 <li className="hover:text-[#AE2FE0] transition-colors">LinkedIn Marketing</li>
                                                                 <li className="hover:text-[#AE2FE0] transition-colors">MLOps</li>
@@ -170,7 +160,7 @@ export default function Header() {
                                                             </ul>
                                                         </div>
 
-                                                        <div className="bg-white p-2 shadow-sm">
+                                                        <div className="bg-white p-2 shadow-sm rounded-tr-xl">
                                                             <img src={setting} alt="setting" className="w-8 h-8 mb-3" />
                                                             <h3 className="font-semibold mb-3 text-gray-800">Social Media</h3>
                                                             <ul className="space-y-2 text-gray-600">
@@ -183,7 +173,7 @@ export default function Header() {
                                                             </ul>
                                                         </div>
 
-                                                        <div className="bg-white p-2 shadow-sm">
+                                                        <div className="bg-white p-2 shadow-sm rounded-bl-xl">
                                                             <img src={optimization} alt="optimization" className="w-8 h-8 mb-3" />
                                                             <h3 className="font-semibold mb-3 text-gray-800">Content Production</h3>
                                                             <ul className="space-y-2 text-gray-600">
@@ -209,7 +199,7 @@ export default function Header() {
                                                             </ul>
                                                         </div>
 
-                                                        <div className="bg-white p-2 shadow-sm">
+                                                        <div className="bg-white p-2 shadow-sm rounded-br-xl">
                                                             <img src={engagement} alt="engagement" className="w-8 h-8 mb-3" />
                                                             <h3 className="font-semibold mb-3 text-gray-800">Business Growth</h3>
                                                             <ul className="space-y-2 text-gray-600">
